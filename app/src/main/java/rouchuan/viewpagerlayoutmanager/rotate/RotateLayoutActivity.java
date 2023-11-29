@@ -5,9 +5,6 @@ import com.leochuan.RotateLayoutManager;
 import rouchuan.viewpagerlayoutmanager.BaseActivity;
 import rouchuan.viewpagerlayoutmanager.Util;
 
-/**
- * Created by Dajavu on 27/10/2017.
- */
 
 public class RotateLayoutActivity extends BaseActivity<RotateLayoutManager, RotatePopUpWindow> {
 

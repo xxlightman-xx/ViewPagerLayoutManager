@@ -3,12 +3,6 @@ package com.leochuan;
 import android.content.Context;
 import android.view.View;
 
-/**
- * An implementation of {@link ViewPagerLayoutManager}
- * which zooms the center item
- */
-
-@SuppressWarnings({"WeakerAccess", "unused"})
 public class ScaleLayoutManager extends ViewPagerLayoutManager {
 
     private int itemSpace;

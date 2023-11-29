@@ -1,9 +1,9 @@
 package rouchuan.viewpagerlayoutmanager.circle;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SwitchCompat;
+
+import androidx.appcompat.widget.SwitchCompat;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -22,8 +22,6 @@ import rouchuan.viewpagerlayoutmanager.Util;
  * Created by Dajavu on 25/10/2017.
  */
 
-@SuppressLint("InflateParams")
-@SuppressWarnings("FieldCanBeLocal")
 class CirclePopUpWindow extends SettingPopUpWindow
         implements SeekBar.OnSeekBarChangeListener, CompoundButton.OnCheckedChangeListener,
         RadioGroup.OnCheckedChangeListener {

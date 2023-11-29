@@ -4,10 +4,6 @@ import com.leochuan.CircleLayoutManager;
 
 import rouchuan.viewpagerlayoutmanager.BaseActivity;
 
-/**
- * Created by Dajavu on 25/10/2017.
- */
-
 public class CircleLayoutActivity extends BaseActivity<CircleLayoutManager, CirclePopUpWindow> {
 
     @Override

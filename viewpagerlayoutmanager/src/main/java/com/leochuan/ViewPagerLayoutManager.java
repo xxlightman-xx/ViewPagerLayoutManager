@@ -3,8 +3,8 @@ package com.leochuan;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,14 +12,13 @@ import android.view.animation.Interpolator;
 
 import java.util.ArrayList;
 
-import static android.support.v7.widget.RecyclerView.NO_POSITION;
+import static androidx.recyclerview.widget.RecyclerView.NO_POSITION;
 
 /**
  * An implementation of {@link RecyclerView.LayoutManager} which behaves like view pager.
  * Please make sure your child view have the same size.
  */
 
-@SuppressWarnings({"WeakerAccess", "unused", "SameParameterValue"})
 public abstract class ViewPagerLayoutManager extends LinearLayoutManager {
 
     public static final int DETERMINE_BY_MAX_AND_MIN = -1;
@@ -60,7 +59,6 @@ public abstract class ViewPagerLayoutManager extends LinearLayoutManager {
      * Many calculations are made depending on orientation. To keep it clean, this interface
      * helps {@link LinearLayoutManager} make those decisions.
      * Based on {@link #mOrientation}, an implementation is lazily created in
-     * {@link #ensureLayoutState} method.
      */
     protected OrientationHelper mOrientationHelper;
 
@@ -315,8 +313,6 @@ public abstract class ViewPagerLayoutManager extends LinearLayoutManager {
      * laid out at the end of the UI, second item is laid out before it etc.
      * <p>
      * For horizontal layouts, it depends on the layout direction.
-     * When set to true, If {@link android.support.v7.widget.RecyclerView} is LTR, than it will
-     * layout from RTL, if {@link android.support.v7.widget.RecyclerView}} is RTL, it will layout
      * from LTR.
      */
     public void setReverseLayout(boolean reverseLayout) {

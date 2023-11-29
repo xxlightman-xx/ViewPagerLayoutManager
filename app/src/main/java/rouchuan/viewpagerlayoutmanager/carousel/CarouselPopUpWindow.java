@@ -2,8 +2,8 @@ package rouchuan.viewpagerlayoutmanager.carousel;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SwitchCompat;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.SwitchCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -12,17 +12,11 @@ import android.widget.TextView;
 
 import com.leochuan.CarouselLayoutManager;
 import com.leochuan.CenterSnapHelper;
-import com.leochuan.ViewPagerLayoutManager;
 
 import rouchuan.viewpagerlayoutmanager.R;
 import rouchuan.viewpagerlayoutmanager.SettingPopUpWindow;
 import rouchuan.viewpagerlayoutmanager.Util;
 
-/**
- * Created by Dajavu on 27/10/2017.
- */
-
-@SuppressLint("InflateParams")
 @SuppressWarnings("FieldCanBeLocal")
 public class CarouselPopUpWindow extends SettingPopUpWindow
         implements SeekBar.OnSeekBarChangeListener, CompoundButton.OnCheckedChangeListener {
@@ -72,7 +66,7 @@ public class CarouselPopUpWindow extends SettingPopUpWindow
         speedValue.setText(Util.formatFloat(carouselLayoutManager.getMoveSpeed()));
         minScaleValue.setText(Util.formatFloat(carouselLayoutManager.getMinScale()));
 
-        changeOrientation.setChecked(carouselLayoutManager.getOrientation() == ViewPagerLayoutManager.VERTICAL);
+        changeOrientation.setChecked(carouselLayoutManager.getOrientation() == RecyclerView.VERTICAL);
         reverse.setChecked(carouselLayoutManager.getReverseLayout());
         infinite.setChecked(carouselLayoutManager.getInfinite());
 
@@ -123,7 +117,7 @@ public class CarouselPopUpWindow extends SettingPopUpWindow
             case R.id.s_change_orientation:
                 carouselLayoutManager.scrollToPosition(0);
                 carouselLayoutManager.setOrientation(isChecked ?
-                        ViewPagerLayoutManager.VERTICAL : ViewPagerLayoutManager.HORIZONTAL);
+                        RecyclerView.VERTICAL : RecyclerView.HORIZONTAL);
                 break;
             case R.id.s_auto_center:
                 if (isChecked) {

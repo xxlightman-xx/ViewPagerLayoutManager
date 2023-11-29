@@ -2,8 +2,8 @@ package rouchuan.viewpagerlayoutmanager.rotate;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SwitchCompat;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.SwitchCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -75,7 +75,7 @@ public class RotatePopUpWindow extends SettingPopUpWindow
         angleValue.setText(Util.formatFloat(rotateLayoutManager.getAngle()));
 
         reverseRotate.setChecked(rotateLayoutManager.getEnableBringCenterToFront());
-        changeOrientation.setChecked(rotateLayoutManager.getOrientation() == ViewPagerLayoutManager.VERTICAL);
+        changeOrientation.setChecked(rotateLayoutManager.getOrientation() == RecyclerView.VERTICAL);
         reverse.setChecked(rotateLayoutManager.getReverseLayout());
         infinite.setChecked(rotateLayoutManager.getInfinite());
 
@@ -127,7 +127,7 @@ public class RotatePopUpWindow extends SettingPopUpWindow
             case R.id.s_change_orientation:
                 rotateLayoutManager.scrollToPosition(0);
                 rotateLayoutManager.setOrientation(isChecked ?
-                        ViewPagerLayoutManager.VERTICAL : ViewPagerLayoutManager.HORIZONTAL);
+                        RecyclerView.VERTICAL : RecyclerView.HORIZONTAL);
                 break;
             case R.id.s_auto_center:
                 if (isChecked) {

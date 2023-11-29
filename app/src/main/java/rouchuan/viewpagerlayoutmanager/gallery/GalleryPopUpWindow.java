@@ -2,8 +2,8 @@ package rouchuan.viewpagerlayoutmanager.gallery;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SwitchCompat;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.SwitchCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -91,7 +91,7 @@ public class GalleryPopUpWindow extends SettingPopUpWindow
         angleValue.setText(Util.formatFloat(galleryLayoutManager.getAngle()));
 
         centerInFront.setChecked(galleryLayoutManager.getEnableBringCenterToFront());
-        changeOrientation.setChecked(galleryLayoutManager.getOrientation() == ViewPagerLayoutManager.VERTICAL);
+        changeOrientation.setChecked(galleryLayoutManager.getOrientation() == RecyclerView.VERTICAL);
         reverse.setChecked(galleryLayoutManager.getReverseLayout());
         flipRotate.setChecked(galleryLayoutManager.getFlipRotate());
         rotateFromEdge.setChecked(galleryLayoutManager.getRotateFromEdge());
@@ -157,7 +157,7 @@ public class GalleryPopUpWindow extends SettingPopUpWindow
             case R.id.s_change_orientation:
                 galleryLayoutManager.scrollToPosition(0);
                 galleryLayoutManager.setOrientation(isChecked ?
-                        ViewPagerLayoutManager.VERTICAL : ViewPagerLayoutManager.HORIZONTAL);
+                        RecyclerView.VERTICAL : RecyclerView.HORIZONTAL);
                 break;
             case R.id.s_auto_center:
                 if (isChecked) {

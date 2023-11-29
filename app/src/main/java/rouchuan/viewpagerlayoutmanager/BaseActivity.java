@@ -1,10 +1,12 @@
 package rouchuan.viewpagerlayoutmanager;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.graphics.drawable.VectorDrawableCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
+
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
